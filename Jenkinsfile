@@ -19,7 +19,7 @@ pipeline {
                     disableHostKeyChecking: true,
                     installation: 'Ansible',
                     inventory: 'dev.inv',
-                    playbook: 'nginx.yml',
+                    playbook: 'nginx.yaml',
                     extraVars: [
                         ansible_ssh_pass: "${ANSIBLE_SSH_PASS}",
                         ansible_become_pass: "${ANSIBLE_BECOME_PASS}"
