@@ -15,7 +15,7 @@ pipeline {
         stage("Execute Ansible") {
             steps {
                 ansiblePlaybook(
-                    credentialsId: 'ssh', // Jenkins credentials ID for SSH private key
+                    credentialsId: 'private-key', // Jenkins credentials ID for SSH private key
                     disableHostKeyChecking: true,
                     installation: 'Ansible',
                     inventory: 'dev.inv',
