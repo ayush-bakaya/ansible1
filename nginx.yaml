@@ -1,0 +1,18 @@
+# nginx.yml
+- hosts: all
+  become: true
+  tasks:
+    - name: Install NGINX
+      apt:
+        name: nginx
+        state: present
+      # For CentOS/RHEL systems, use `yum` instead:
+      # yum:
+      #   name: nginx
+      #   state: present
+
+    - name: Start NGINX service
+      service:
+        name: nginx
+        state: started
+        enabled: true
