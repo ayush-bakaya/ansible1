@@ -12,7 +12,6 @@ pipeline {
         stage("Execute Ansible") {
             steps {
                 ansiblePlaybook(
-                    installation: 'Ansible',
                     disableHostKeyChecking: true,
                     installation: 'Ansible',
                     inventory: 'dev.inv',
